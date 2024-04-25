@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import cl from "./ModalItem.module.css";
 import { Context } from "../../..";
+import { LOGIN_ROUTE } from "../../../utils/consts";
 
 const ModalItem = ({ show, onHide }) => {
   const { item } = useContext(Context);
@@ -16,7 +17,9 @@ const ModalItem = ({ show, onHide }) => {
           <button className={cl.dropdown_btn}>Оберіть тип товару</button>
           <div className={cl.dropdown_content}>
             {item.types.map((type) => (
-              <a key={type.id}>{type.name}</a>
+              <a href={LOGIN_ROUTE} key={type.id}>
+                {type.name}
+              </a>
             ))}
           </div>
         </div>
