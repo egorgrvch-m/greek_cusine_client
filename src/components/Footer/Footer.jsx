@@ -1,6 +1,7 @@
 import React from "react";
 import cl from "./Footer.module.css";
 import logo from "../../static/logo.png";
+import { LOGIN_ROUTE } from "../../utils/consts";
 
 const Footer = () => {
   return (
@@ -17,7 +18,9 @@ const Footer = () => {
             <section className={cl.blockSection}>
               <ul className={cl.block_list}>
                 <li className={cl.block_list__item}>
-                  <a className={cl.list_item__link}>Головна</a>
+                  <a href={LOGIN_ROUTE} className={cl.list_item__link}>
+                    Головна
+                  </a>
                 </li>
               </ul>
             </section>
@@ -27,16 +30,24 @@ const Footer = () => {
             <section className={cl.blockSection}>
               <ul className={cl.block_list}>
                 <li className={cl.block_list__item}>
-                  <a className={cl.list_item__link}>Риба</a>
+                  <a href={LOGIN_ROUTE} className={cl.list_item__link}>
+                    Риба
+                  </a>
                 </li>
                 <li className={cl.block_list__item}>
-                  <a className={cl.list_item__link}>Салати</a>
+                  <a href={LOGIN_ROUTE} className={cl.list_item__link}>
+                    Салати
+                  </a>
                 </li>
                 <li className={cl.block_list__item}>
-                  <a className={cl.list_item__link}>Снеки</a>
+                  <a href={LOGIN_ROUTE} className={cl.list_item__link}>
+                    Снеки
+                  </a>
                 </li>
                 <li className={cl.block_list__item}>
-                  <a className={cl.list_item__link}>Десерти</a>
+                  <a href={LOGIN_ROUTE} className={cl.list_item__link}>
+                    Десерти
+                  </a>
                 </li>
               </ul>
             </section>

@@ -17,7 +17,7 @@ const Shop = observer(() => {
   useEffect(() => {
     fetchTypes().then((data) => item.setTypes(data));
     fetchItems().then((data) => item.setItems(data.rows));
-  }, []);
+  }, [item]);
 
   return (
     <div>

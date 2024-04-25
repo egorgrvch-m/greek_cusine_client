@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
 import cl from "./HeaderNav.module.css";
 import basket from "../../../static/basket.png";
 import { Context } from "../../..";
@@ -19,22 +18,22 @@ const HeaderNav = observer(() => {
     <nav className={cl.nav}>
       <ul className={cl.nav_list}>
         <li className={cl.nav_list__item}>
-          <a href="#" className={cl.list_item__link}>
+          <a href={LOGIN_ROUTE} className={cl.list_item__link}>
             Головна
           </a>
         </li>
         <li className={cl.nav_list__item}>
-          <a href="#" className={cl.list_item__link}>
+          <a href={LOGIN_ROUTE} className={cl.list_item__link}>
             Про нас
           </a>
         </li>
         <li className={cl.nav_list__item}>
-          <a href="#" className={cl.list_item__link}>
+          <a href={LOGIN_ROUTE} className={cl.list_item__link}>
             Меню
           </a>
         </li>
         <li className={cl.nav_list__item}>
-          <a href="#" className={cl.list_item__link}>
+          <a href={LOGIN_ROUTE} className={cl.list_item__link}>
             Контакти
           </a>
         </li>
