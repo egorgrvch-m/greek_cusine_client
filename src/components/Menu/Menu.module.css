@@ -1,0 +1,8 @@
+.menu_inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 45px;
+  width: 100%;
+  max-width: 80vw;
+  margin: 0 auto;
+}

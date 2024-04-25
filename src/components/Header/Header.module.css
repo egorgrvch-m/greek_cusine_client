@@ -1,0 +1,14 @@
+.header {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo {
+  width: 170px;
+}

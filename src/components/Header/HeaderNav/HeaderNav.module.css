@@ -1,0 +1,30 @@
+.nav_list {
+  display: flex;
+  align-items: center;
+}
+
+.nav_list__item {
+  margin-left: 40px;
+}
+
+.nav_list__item:first-child {
+  margin-left: 0px;
+}
+
+.itemControl_section {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-left: 50px;
+}
+
+.list_item__link {
+  font-size: 21px;
+}
+
+.list_item__link:hover {
+}
+
+.itemControl_img {
+  width: 35px;
+}

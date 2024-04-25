@@ -1,0 +1,135 @@
+.footer {
+  border-top: 2px #000 solid;
+  width: 80%;
+  margin: 150px auto;
+}
+
+.footer_inner {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.footerLogo_img {
+  width: 212px;
+  height: 106px;
+}
+
+.footer_contentBlock {
+  display: flex;
+  justify-content: space-around;
+  gap: 160px;
+  margin-top: 25px;
+}
+
+.blockSection {
+  margin-top: 10px;
+}
+
+.block_list__item {
+  margin-top: 8px;
+}
+
+.block_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.list_item__link {
+  position: relative; /* Добавляем позиционирование для псевдоэлемента */
+  font-size: 17px;
+  transition: 1s ease-in;
+  cursor: pointer;
+}
+
+.list_item__link::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  width: 0;
+  border-bottom: 1px #000 solid;
+  transition: width 0.5s;
+}
+
+.list_item__link:hover::after {
+  width: 100%;
+}
+
+.list_item__text {
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .footer_contentBlock {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+    gap: 120px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer_contentBlock {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+  }
+
+  .block_title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .list_item__link {
+    font-size: 15px;
+  }
+
+  .list_item__text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer_contentBlock {
+    display: flex;
+    gap: 70px;
+  }
+}
+
+@media (max-width: 760px) {
+  .footer_contentBlock {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerLogo_img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .footer_contentBlock {
+    display: flex;
+    justify-content: space-around;
+    gap: 70px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer_contentBlock {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-top: 25px;
+  }
+}

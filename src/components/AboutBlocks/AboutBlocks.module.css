@@ -1,0 +1,14 @@
+.aboutBlocks_inner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 80vw;
+  margin: 110px auto 110px auto;
+}
+
+@media (max-width: 992px) {
+  .aboutBlocks_inner {
+    display: flex;
+    flex-direction: column;
+  }
+}

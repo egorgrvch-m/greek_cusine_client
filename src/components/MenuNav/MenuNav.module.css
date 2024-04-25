@@ -1,0 +1,246 @@
+.menuNav {
+  display: flex;
+  width: 100%;
+  max-width: 80vw;
+  margin: 30px auto;
+}
+
+.menuNav_title {
+  font-size: 40px;
+}
+
+.menuNav_list {
+  display: flex;
+  align-items: end;
+}
+
+.menuNav_list__item {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  margin-left: 40px;
+  transition: all 0.3s ease-out;
+}
+
+.menuNav_list__item:first-child {
+  margin-left: 80px;
+}
+
+.menuNav_list__item:hover {
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menuNav:hover .menuNav_list__item:not(:hover) {
+  color: gray;
+}
+
+.selected {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/*-- Adaptive --*/
+@media (min-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+  .menuNav {
+    display: flex;
+    width: 100%;
+    max-width: 80vw;
+    margin: 30px auto;
+  }
+
+  .menuNav_title {
+    font-size: 30px;
+  }
+
+  .menuNav_list {
+    display: flex;
+    align-items: end;
+  }
+
+  .menuNav_list__item {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    margin-left: 15px;
+    transition: all 0.3s ease-out;
+  }
+
+  .menuNav_list__item:first-child {
+    margin-left: 40px;
+  }
+
+  .menuNav_list__item:hover {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .menuNav:hover .menuNav_list__item:not(:hover) {
+    color: gray;
+  }
+}
+
+@media (max-width: 720px) {
+  .menuNav {
+    display: flex;
+    width: 100%;
+    max-width: 80vw;
+    margin: 30px auto;
+  }
+
+  .menuNav_title {
+    font-size: 30px;
+  }
+
+  .menuNav_list {
+    display: flex;
+    align-items: end;
+  }
+
+  .menuNav_list__item {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+
+  .menuNav_list__item:first-child {
+    margin-left: 30px;
+  }
+
+  .menuNav_list__item:hover {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .menuNav:hover .menuNav_list__item:not(:hover) {
+    color: gray;
+  }
+}
+
+@media (max-width: 560px) {
+  .menuNav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 50vw;
+    margin: 15px auto;
+  }
+
+  .menuNav_title {
+    font-size: 26px;
+    margin: 0 auto;
+  }
+
+  .menuNav_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .menuNav_list__item {
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  .menuNav_list__item:first-child {
+    margin-left: 0;
+  }
+
+  .menuNav_list__item:hover {
+    font-size: 20px;
+  }
+
+  .menuNav:hover .menuNav_list__item:not(:hover) {
+    color: gray;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .menuNav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 50vw;
+    margin: 15px auto;
+  }
+
+  .menuNav_title {
+    font-size: 35px;
+    margin: 0 auto;
+  }
+
+  .menuNav_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .menuNav_list__item {
+    margin-left: 0;
+  }
+
+  .menuNav_list__item:first-child {
+    margin-left: 0;
+  }
+
+  .menuNav_list__item:hover {
+  }
+
+  .menuNav:hover .menuNav_list__item:not(:hover) {
+    color: gray;
+  }
+}
+
+@media (max-width: 320px) {
+  .menuNav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 50vw;
+    margin: 15px auto;
+  }
+
+  .menuNav_title {
+    font-size: 35px;
+    margin: 0 auto;
+  }
+
+  .menuNav_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .menuNav_list__item {
+    margin-left: 0;
+  }
+
+  .menuNav_list__item:first-child {
+    margin-left: 0;
+  }
+
+  .menuNav_list__item:hover {
+  }
+
+  .menuNav:hover .menuNav_list__item:not(:hover) {
+    color: gray;
+  }
+} */

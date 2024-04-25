@@ -1,0 +1,166 @@
+import greek from "../static/menu/greek_salad.png";
+import health from "../static/health.png";
+import atmosphere from "../static/atmosphere.png";
+import service from "../static/service.png";
+
+const MENU_ITEMS = [
+  {
+    id: 1,
+    name: "Грецький Салат",
+    price: 159,
+    text: "Свіжі овочі, ніжний сир фета вимочений у томатному соку, грубо...",
+    img: greek,
+    alt: "Фото салату. Назва: Грецький Салат. Опис: Свіжі овочі, ніжний сир фета вимочений у томатному соку, грубо...",
+  },
+  {
+    id: 2,
+    name: "Дакос",
+    price: 179,
+    text: "Cалат з дрібно нарізаних помідорів і сиру Мізітра...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczPvrf2wtAA2q2GRZMTPFTwUwKQn8L1zxcrjPojsUd8kXGYbhN63b4Wq5RRl9KR18Y1aYsdV6hHr-5ZHaLqQJX4a1TJmbaZLai2naEfNShAsMMfY8SX5XFYy3yrNNFhldRiO08MEnoN_BBK-EkLYzvxl429_IaCZRl0q6zfZGNU6lS8dW6ZBQUDdcqD3HopP7GAYxQLY7eGYDG_oYgkE0J-lr-bfIq59mW_m1XrJ75vpeh4EoIUfhTu3hONkPXdRG8kz8x1p-sfnlm9MkzpFswrbWBPJnBKTwLLRg9zMiOKSC5O8NYv_rwwo1r1jiA8GjO0MUT8qxn23B0BRf1PJTbLbdwanISNaQV5pgR9fHJKjg0lihK6MMY17G7xb3e4Oo1K1axeTNT2prt7cJfbRmI5O1URKOQxi7ADlfNRyomSq7G0JNwOGHiv8LYKOz-m39NvDdQkkYNi_7IgjQkeO-5UYmbH5oRigpMSKdx0ibPNUfy0gNeFFefrdpwvNQ97nP7DtejvTl05J5sZ244CEHIBWrfMSC7hkIU1kPL4RNpmGdD3OP8a__GZ433vojEqQHPhwA8D_7VoMaWvTZrTZ2D8dL8agC2FjCi6bxfVNbxqeSV2xxFKJK9dy1BKwPal65VVrCVLJa054OYjTuE9L77BLVWLcUNGj_tvc1sED0ECoYJTe898z2lfmIJ0Gq5st0XBDfgIkFZAsqs9m1fVSKH-MhRpH5c8kxVq8xLLR9QsSK3Ie3xRrcxWv5rGV0Yy7b_wW5eBp5KJ3cFdKqLm6Xhod65TG3C4aL5clpzK5KIzry5E6KSR8SLqNt3dqHd0PU41GmEaG18pYN3Tw9vNlYel334MCoHC5ic1dOKxQDZPEQxbu5xpaCV5G_fYVabi3C4h8BviAzffZvqe_PeUkj-NsHmSyS9-a8LeFRXTWtJr16ax_ALWi=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Дакос. Опис: Cалат з дрібно нарізаних помідорів і сиру Мізітра...",
+  },
+  {
+    id: 3,
+    name: "Мелізаносалата",
+    price: 219,
+    text: "Суміш запечених баклажанів, рослинного масла, спецій, лимона...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczOu1EDKwZNFqe3f4_xCK5P1Ckc7WtSJ_RgpTF3c2qoiaB2TaikS2lWNIPWmUeKykXtIqnnDxiqSZsO_XEWS_A8A4t3uh8r64X3bL0gO5Z8HeM7QfX4-SUS374ZMOjmJtjrEkQypuUuOiHzyG7Pso2g2fCScnTYO8wPu-RD9JLYZD93cg-8f_UwCkwYCpCAu1Dv1pVmgz4qCU5SNr6fUyPPw-HvbVvtWgQgVxmwKSV1Vw1U4mR-d7mA3Afs6YSjuePkH7hO7nsBcbXwqXFa5NcXcgFD8oUxsb8D1isigvzx56QWPe8Zj7rAY3PMKRrh9CD1O10dkb2Mfr1XkOz7RcAALHIRYL_622JbwMJBs8UAuwTjdWBpNkIrvwt10c0Q7ijmon3A76QoAJXGxzpSE5QdDmJdvHOyO4p42heyasR32gH0p91W5jRBokbFWQq9xmtk7KeGuWEOGk55Q3mJ0Xsot6YlWpFtRdjCq-D1wC9cLU_UnBfVjZ-Kt1fLyHxfHxjquhNk-Pf8zCygPqTGfL32YWZrmPRyCLlydfR_cEB-DcbGY5d7BzL2P_inzXAmylYl9xCgtKX1_45H7rPpgek1kWGVzkV0smjnytO0W7hpeJ7XkhPDeWJJHEYWrEwY4fTCjd7smcCLPPPGztzMVZZnR83NBupb4ZOnbDCFRC346AfixuxiOjc62cTRL8sKsEW3bxOZoos26F_0nH44X58fSyEShsfosezOTZDnJ0Sbhal_D-MVZbk0WlynC-Ei9mvZaM2SOhbgA7du8N5xJRbRKhCgtDhajE0VVnQIJ4MCu7qYtvpxc9ebpl2XV3vUiiHqPaVIy5Gh9JCEpYsu1HmHD_s6IddUWzjFOmsmAd1dib-7SrOpgrLDT0bKlIGo1fzbdXdj4sKlYjgb0XvD3WvveTve0NfllB1uvH6z0nw4daatJX7_3=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Мелізаносалата. Опис: Суміш запечених баклажанів, рослинного масла, спецій, лимона...",
+  },
+  {
+    id: 4,
+    name: "Лухано",
+    price: 99,
+    text: "Салат з білокачанної капусти, моркви, кореня і листя селери...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczMFfnuG0a6OcGoz5sImYQm0VbPzl51UA0IOzHnADUx4G1gc4LQAu9MRUqlXKY1I35Ap4SeAS5M2P_1vKN-trmQUGHyI3606IsRjyaGE-wBNBhmYUUH226xrwcmMhiTVMqPlxeOLC9pZxc-JmYdyT2VbD6SBWRdt-7xJ3qMYYNBneDVS0XWVnAFWC33bYQ36iLM1U45kWZQNdI8K71HI48l5QkS7cLGkbLAVJ-z_kXonPBD2ffruKHCI43dkvAs2a_IddZAHn8MncfNCK2n2BlmCZxUMGFD8r2iJHy7myD0gbLTbsZLLwbSqyu8he3SZdmECtiihW3eJ0g042rbXpz9Dho-ZsOIYvWr9e86YkZMhP7ltMNHeDkT8IebwTy-lgvUWFTsENkBmPOzdCMKxXOZGVELvl9nzs-VXq5hTV72Nx6OghlgK3rQRKxZcm34XDXNbstagSamJfRC5NWbrH8BlZy_DSRxLQadglhHuH3pvl1xCzNilJZTVwT165-91AjPxEqIG-c2s5m5wChE0ei8JDYTt3xh9vXRymL9b6kULULCGAPShR6kELFUBbpmImHt3l1PqmH-LrdYScC7iMckylKcR4G1mw2mLI6AgNUV1_fDh6wuaOdSPlJ1CCtj3ywrh5SjeBLjvs8MabwtrPKE6hatLNs_E29Q4dUVqy99E9qqouVeZSOakrCnSFyTtgguyaSiRTp1GwdaDAVpo8enphbl0D1oXJLdwwqOoQy0fzPTZnLl0CUP8e7BFkoPDXJiLzCXiZlJ9hj-FN8gGrGXRX2oQNHCrh6SLfNoF-s10vedfyJGiuwKaDGIrDZQSY97ILFMCSGBRcjes2o8dS7QOYptdO-Ll3eqKvlciltnEbOrCuT9c0JkrNqBnCgWUWWXIdKmhPGiDeo2JkiXzMTQ5o7g6bqmP-lPXl5-n5IJ4tdpVfSVJ=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Лухано. Опис: Салат з білокачанної капусти, моркви, кореня і листя селери...",
+  },
+  {
+    id: 5,
+    name: "Салат з мідій",
+    price: 249,
+    text: "Салат складається з маринованих мідій, нарізаних огірків, оливкової олії...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczNHl-k6WhGpjLl_LjTC0E_TQr0DG1QNJ5L8yeLjfXzUYsPIUGZ6brIBjLGZyVbEJ67r0A2mVvKaYh_8W2kHYDHDg-LZjXk-_krCf9uwP4X9jIcbTCk7Fax8ThycjJGMiznN67uSMnDa1iqhxTPwaW0k2zbhH4zqE2wpCwbrIhe1dsShpaTnQr1Hn-eO4NMVbVdqu6DcWwbCjBbNwCH2jzpuyWDd-Csjhd3yRLSngBENQh-CCSU8VN8zoJP3ZgMtxz1BabTf21lUtA_aJg-fY1HeUILxHPtsv-JDLmiGvOwVZD9xzOQ3a9opsBV9FR8salxnp0y9Qipxuhqk7pAPifT7HjxEdjHCFMSMa2NWyYpG4Pm0M60yQb2dt4CH0I3Cv9zsTugkvzOpipNbe5qnrXs7btK7xQZDUQZijVYGa2G2Fk_0_YGnFsR1W7LdXQvii0xz2kAP5-6rAKmZfmlCYc7QljlSljISzqFIieq6Lx4k6xXhDN45QVUFWt3MXJpa-YFnSiRVBy2wSlNFGjjOWcK4xN_hDbap1pm6lZAbRjOh7F21aOkf7utUs_vQPujPFaxFQxiPE0xRIJjdxSkoh9VsRfz5dEhLNGntzu1BCnsgE77bECl7XwJs8AkMPagFOzywrC-eRPVZIAzuzBEfhhriO75n1pvBL1D6BQ09F6C2R33XcRo13n8SPzxe_-fxyM1JaG1KVJkQ2mfgncT-bgK4y1-QUuV7sKy5VgqvlTQt1rfkUb1Z_4x5FFaDb_nRClROKryQVNbLooxLlYuINXfxpNA333X8HHHvA4n5d0C4dHd4fqLsA39xUvTq4LeVRGFu9TSvm6_SldxML5k8oxhMo94zZFvp-e8WCkK5XWH99YoXD0WVBP_K_roLFspdpUkkCal8kw2R2JbLUZgmVeEIm8PNfXSIM_rRGRCg28Kw3MhPRhFW=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Салат з мідій. Опис: Салат складається з маринованих мідій, нарізаних огірків, оливкової олії...",
+  },
+  {
+    id: 6,
+    name: "Салат з баклажанів",
+    price: 139,
+    text: "Салат містить смажені кубики баклажанів, нарізані помідори...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczO11-TJS-997PePMV29AqFj832CVZ78auV2_9GluFZgUSIDIeVrMJQZrWKhgktAVEJemtmiE9KIPi2KJNZ-9K-XZCEJ31b1j2ORrgcLTOlQq9DRq6h5guE5s4PNlMqVVQKgOIeFuKRozbVnvNUY55wjjMA6cSZS4zX7WFMbnbU5QgjRwEhzgzmvJwV7zpzv0VozFEtgBnoXHO4Cxopgnw5pE_wzcwJaUuHVT4xs_cdKr00nOAB7ksIAmLgcEdJ84X6sRpvNFFEYi-_wlm_02yLAlNNMKdxsHHMZoIIuUHv6bYw2IdoG9Gkr1cfisjJ8zvpIzuSYqK8JrazyPUaqQibS2x9cr2_grRuFJF1WIOetTdlQU_RXwzWOLlT13J3Cp1u0oQzykRfy0YRVmEIcaogqe1cMdNtk3s7EhKMuuCYVtm_Daf3yQvIWPmGhPKPiKKmNYYtffZJJCl3ThmasVMV1OvCywiarL-DL0GtrpNTPxhBR44F4Mi6geOV7LXYbPOjqkEIVfvnXH06ElOuPvj_uG9oaw_OpPTwXqo99N41RKqQ8zLzrpyXdcFatELTG036K0-hAquTSPkTBlo229FHjnpHvd4ZfKqu0BLzKMk54aTU3fR7q9RZVe8v0diK6cG3NyyEbY_Us3Zgpt_1OpZBNM2Gt7ZebAWbo_CGlHcu2qBXA5mqauOWr9BQPb94EoVRc5Sp3PG-EOtf1C5fRHvcHm75mA6Gh3CyRKIzeFSWx8kAwRqCv00X4TXPJGCSu6f3LoY_4wyl4Tpiw3HmewYk70jxFejbxgO0x1rHPW8knsyWMy05Vx-7moNHBoFaKwNBRY5MSYsyVZvhqvVHjIoAddkVupWV9tgqzRlAvpD44R0VavHsCs0ut55zcNLuBY6V6soadbL2zJpzeW0EmBjIBHuU6E2zMOn9b4ltxA1RxWieRTZem=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Салат з баклажанів. Опис: Салат містить смажені кубики баклажанів, нарізані помідори...",
+  },
+  {
+    id: 7,
+    name: "Салат з кальмарів",
+    price: 219,
+    text: "До складу салату входять смажені кільця кальмарів, смажений кунжут...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczNKfGcqQZXtL_wXX8vAbcKudQasGz9EjwS8lOdKMlf3g2YQq0lTCNfbHmdR8Tg4ktVAlPSZPl_K_o__9A4LO4M65IF0xK1LzRjSYiYf3mY4rnp0N7R95du5WVLCfVvPKM94R8SZrnL7AjUPI6SLLR0wtQ2ob8VroFJIIl00zJ2gCY1WlHntTB4F6KWqkScEcLOFl10TwUnU-85UeRUixSvf7CaKvIQaDiGxvQSs4IQ8YrPJ83qcJDlPrIQCAAVRmEQYLGTF2ZP58B1v_Y4fjcYzMEwBBn1lkwZ_zeAH-2hkrpROgQvvJicoA_dgd4LByjPMkoIneWHuJO_s-_ItNoGZebYfgRU_jekkMtbfAPoFQQQuS8WKFDBAQe6UhFbDZT3k4lckfrezxWYfzTDcwn5qeCc0sG2LZQDMp-cwqEo45SGwIZTySrk2G68GT_7KAMLJ6O7zyyBsyblXW-dygMTSIYoQJGlpwMDb3qZgjQ2WhU__RN4CygvXZxYGOqLRFJly-dAk6V3B_275i302ZBMyHslG6raVUIVXnrZh1wCRXP1ZjmSZvQSV9oTcZ_uA4R3s4wGmnWgGYmu4IWtw9mddNfjuGIYBVEWDKmGO-kREon_h8UpFZxzDIjvSUZV0WzZaLYHIvxPonGgojjYzD-8IPKnLZZe9XImHcPmMMoTWzHlgYNTlWK2y1H8MyAGyifMHgeU86f9o0fMmh3sbmSqdapRDaJZIKsCsy8dBY_Plzwijb0Yogyt-84tmtMW7xL4WJ1lFkNZ5lLeU3xh69gsB3xD6J8DlMyjcr1jDkzQt727aausk6r_28XBpspmaaz2SunZY1CAPg1fIDIN5Uvd3D0Ku1ws_O2Plj_IP1gevMR5iKzHgwFSqFNVrfFWV5wjVM15i_y82QE65AkOZ5Ad_oONNj3ZsEVKzoVSyra1iieLa5NDM=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Салат з кальмарів. Опис: До складу салату входять смажені кільця кальмарів, смажений кунжут...",
+  },
+  {
+    id: 8,
+    name: "Салат з редису",
+    price: 109,
+    text: "Салат складається з руколи, редису, оливк  ової олії та лимонного соку...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczOJXHM4wsxi5_3QnX_hxaD3BvrZyQ9gfVChaHOwd-odScqd0P3RJtB-GaPhyJFmyHTzJR3KT6T6IoKnbtWhzMsXCTVvtTUVpn5ftVcTDEMO2fTkyznGlI1T4B7XPTYLakqfzMaXyqVzJiVWpUYDw_3JEbBVCM0QtFo0kFeUn50QwyRwL9ekE18SHzGu1qSmurJadsqB2ju6r6hU2j-b0UsZqMovTMjl_BKqEqdV5yPg5B5CqWcCPwmevHsL24jVD683MkTIOo5G-1PYJ5c-zasVRaOFjXwfn_ANoJtXDHZBXlMM1Z5IwrOX8Xo1Dki1iLdt5fJeZ7SyKKpUfAbVqZYT9SFLsRaMLS6t74iVkVVNey3rhYQuo8RtbxAMdlOgSnPZsdYh7_7gcUPhElqw6Kg2Cu-QFsEEncWoEoI1UX6l-pt2llDg5ASxgQZMZa7i7z-JVDgKt_SoGOm_IibJ1S6xRdt68rAhgB-cpyCgc78IK_kKrXKaIpPAog-VDoXar3v1RD1qsmGLJ2j7WB9K05UfRWk1f4AGk4zBvUtojz-69omz0g-zgiNoVUJ8tEbvJ4zhwUUB3hQAhbiS30p-y2xXMDK_2iKFIdEmThKhGsfgBdgWicBwjW6wYQYAoL5scnHkvOSwAzN4cHY-hnJnMuLUMN9ALatvb8pXYMMZNLY7qdz0XY6gCzw1rPG30Wimua2JJ5z1XXJP7xrCVvQi5oAE5zImFDLvLwXGzJ7TBig10sEFjO1YpSnihpDpOCMqSqlnJoRfZBG_sVxGmMdG2sbagKcVm-0jlqwyxME7NdSwDiHdDVHMnoXbZrNQig49LiFQuYi4d3lrUTNF3-qeckmYvsgkiJq-KVreD2oXulDJ_rhVlYIbTQ_KpVkWNtqXMJdB3nCxutf1HjGeV_8hhZmAAaVTGE2rAUmvdtpKufdAmEr5D0qQ=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Салат з редьки. Опис: Салат складається з руколи, редьки, оливкової олії та лимонного соку...",
+  },
+  {
+    id: 9,
+    name: "Мойва",
+    price: 229,
+    text: "Обжарений в оливковому маслі стейк мойви...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczOJXHM4wsxi5_3QnX_hxaD3BvrZyQ9gfVChaHOwd-odScqd0P3RJtB-GaPhyJFmyHTzJR3KT6T6IoKnbtWhzMsXCTVvtTUVpn5ftVcTDEMO2fTkyznGlI1T4B7XPTYLakqfzMaXyqVzJiVWpUYDw_3JEbBVCM0QtFo0kFeUn50QwyRwL9ekE18SHzGu1qSmurJadsqB2ju6r6hU2j-b0UsZqMovTMjl_BKqEqdV5yPg5B5CqWcCPwmevHsL24jVD683MkTIOo5G-1PYJ5c-zasVRaOFjXwfn_ANoJtXDHZBXlMM1Z5IwrOX8Xo1Dki1iLdt5fJeZ7SyKKpUfAbVqZYT9SFLsRaMLS6t74iVkVVNey3rhYQuo8RtbxAMdlOgSnPZsdYh7_7gcUPhElqw6Kg2Cu-QFsEEncWoEoI1UX6l-pt2llDg5ASxgQZMZa7i7z-JVDgKt_SoGOm_IibJ1S6xRdt68rAhgB-cpyCgc78IK_kKrXKaIpPAog-VDoXar3v1RD1qsmGLJ2j7WB9K05UfRWk1f4AGk4zBvUtojz-69omz0g-zgiNoVUJ8tEbvJ4zhwUUB3hQAhbiS30p-y2xXMDK_2iKFIdEmThKhGsfgBdgWicBwjW6wYQYAoL5scnHkvOSwAzN4cHY-hnJnMuLUMN9ALatvb8pXYMMZNLY7qdz0XY6gCzw1rPG30Wimua2JJ5z1XXJP7xrCVvQi5oAE5zImFDLvLwXGzJ7TBig10sEFjO1YpSnihpDpOCMqSqlnJoRfZBG_sVxGmMdG2sbagKcVm-0jlqwyxME7NdSwDiHdDVHMnoXbZrNQig49LiFQuYi4d3lrUTNF3-qeckmYvsgkiJq-KVreD2oXulDJ_rhVlYIbTQ_KpVkWNtqXMJdB3nCxutf1HjGeV_8hhZmAAaVTGE2rAUmvdtpKufdAmEr5D0qQ=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Салат з редьки. Опис: Салат складається з руколи, редьки, оливкової олії та лимонного соку...",
+  },
+  {
+    id: 10,
+    name: "Грецький Салат",
+    price: 159,
+    text: "Свіжі овочі, ніжний сир фета вимочений у томатному соку, грубо...",
+    img: greek,
+    alt: "Фото салату. Назва: Грецький Салат. Опис: Свіжі овочі, ніжний сир фета вимочений у томатному соку, грубо...",
+  },
+  {
+    id: 11,
+    name: "Дакос",
+    price: 179,
+    text: "Cалат з дрібно нарізаних помідорів і сиру Мізітра...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczPvrf2wtAA2q2GRZMTPFTwUwKQn8L1zxcrjPojsUd8kXGYbhN63b4Wq5RRl9KR18Y1aYsdV6hHr-5ZHaLqQJX4a1TJmbaZLai2naEfNShAsMMfY8SX5XFYy3yrNNFhldRiO08MEnoN_BBK-EkLYzvxl429_IaCZRl0q6zfZGNU6lS8dW6ZBQUDdcqD3HopP7GAYxQLY7eGYDG_oYgkE0J-lr-bfIq59mW_m1XrJ75vpeh4EoIUfhTu3hONkPXdRG8kz8x1p-sfnlm9MkzpFswrbWBPJnBKTwLLRg9zMiOKSC5O8NYv_rwwo1r1jiA8GjO0MUT8qxn23B0BRf1PJTbLbdwanISNaQV5pgR9fHJKjg0lihK6MMY17G7xb3e4Oo1K1axeTNT2prt7cJfbRmI5O1URKOQxi7ADlfNRyomSq7G0JNwOGHiv8LYKOz-m39NvDdQkkYNi_7IgjQkeO-5UYmbH5oRigpMSKdx0ibPNUfy0gNeFFefrdpwvNQ97nP7DtejvTl05J5sZ244CEHIBWrfMSC7hkIU1kPL4RNpmGdD3OP8a__GZ433vojEqQHPhwA8D_7VoMaWvTZrTZ2D8dL8agC2FjCi6bxfVNbxqeSV2xxFKJK9dy1BKwPal65VVrCVLJa054OYjTuE9L77BLVWLcUNGj_tvc1sED0ECoYJTe898z2lfmIJ0Gq5st0XBDfgIkFZAsqs9m1fVSKH-MhRpH5c8kxVq8xLLR9QsSK3Ie3xRrcxWv5rGV0Yy7b_wW5eBp5KJ3cFdKqLm6Xhod65TG3C4aL5clpzK5KIzry5E6KSR8SLqNt3dqHd0PU41GmEaG18pYN3Tw9vNlYel334MCoHC5ic1dOKxQDZPEQxbu5xpaCV5G_fYVabi3C4h8BviAzffZvqe_PeUkj-NsHmSyS9-a8LeFRXTWtJr16ax_ALWi=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Дакос. Опис: Cалат з дрібно нарізаних помідорів і сиру Мізітра...",
+  },
+  {
+    id: 12,
+    name: "Мелізаносалата",
+    price: 219,
+    text: "Суміш запечених баклажанів, рослинного масла, спецій, лимона...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczOu1EDKwZNFqe3f4_xCK5P1Ckc7WtSJ_RgpTF3c2qoiaB2TaikS2lWNIPWmUeKykXtIqnnDxiqSZsO_XEWS_A8A4t3uh8r64X3bL0gO5Z8HeM7QfX4-SUS374ZMOjmJtjrEkQypuUuOiHzyG7Pso2g2fCScnTYO8wPu-RD9JLYZD93cg-8f_UwCkwYCpCAu1Dv1pVmgz4qCU5SNr6fUyPPw-HvbVvtWgQgVxmwKSV1Vw1U4mR-d7mA3Afs6YSjuePkH7hO7nsBcbXwqXFa5NcXcgFD8oUxsb8D1isigvzx56QWPe8Zj7rAY3PMKRrh9CD1O10dkb2Mfr1XkOz7RcAALHIRYL_622JbwMJBs8UAuwTjdWBpNkIrvwt10c0Q7ijmon3A76QoAJXGxzpSE5QdDmJdvHOyO4p42heyasR32gH0p91W5jRBokbFWQq9xmtk7KeGuWEOGk55Q3mJ0Xsot6YlWpFtRdjCq-D1wC9cLU_UnBfVjZ-Kt1fLyHxfHxjquhNk-Pf8zCygPqTGfL32YWZrmPRyCLlydfR_cEB-DcbGY5d7BzL2P_inzXAmylYl9xCgtKX1_45H7rPpgek1kWGVzkV0smjnytO0W7hpeJ7XkhPDeWJJHEYWrEwY4fTCjd7smcCLPPPGztzMVZZnR83NBupb4ZOnbDCFRC346AfixuxiOjc62cTRL8sKsEW3bxOZoos26F_0nH44X58fSyEShsfosezOTZDnJ0Sbhal_D-MVZbk0WlynC-Ei9mvZaM2SOhbgA7du8N5xJRbRKhCgtDhajE0VVnQIJ4MCu7qYtvpxc9ebpl2XV3vUiiHqPaVIy5Gh9JCEpYsu1HmHD_s6IddUWzjFOmsmAd1dib-7SrOpgrLDT0bKlIGo1fzbdXdj4sKlYjgb0XvD3WvveTve0NfllB1uvH6z0nw4daatJX7_3=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Мелізаносалата. Опис: Суміш запечених баклажанів, рослинного масла, спецій, лимона...",
+  },
+  {
+    id: 13,
+    name: "Лухано",
+    price: 99,
+    text: "Салат з білокачанної капусти, моркви, кореня і листя селери...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczMFfnuG0a6OcGoz5sImYQm0VbPzl51UA0IOzHnADUx4G1gc4LQAu9MRUqlXKY1I35Ap4SeAS5M2P_1vKN-trmQUGHyI3606IsRjyaGE-wBNBhmYUUH226xrwcmMhiTVMqPlxeOLC9pZxc-JmYdyT2VbD6SBWRdt-7xJ3qMYYNBneDVS0XWVnAFWC33bYQ36iLM1U45kWZQNdI8K71HI48l5QkS7cLGkbLAVJ-z_kXonPBD2ffruKHCI43dkvAs2a_IddZAHn8MncfNCK2n2BlmCZxUMGFD8r2iJHy7myD0gbLTbsZLLwbSqyu8he3SZdmECtiihW3eJ0g042rbXpz9Dho-ZsOIYvWr9e86YkZMhP7ltMNHeDkT8IebwTy-lgvUWFTsENkBmPOzdCMKxXOZGVELvl9nzs-VXq5hTV72Nx6OghlgK3rQRKxZcm34XDXNbstagSamJfRC5NWbrH8BlZy_DSRxLQadglhHuH3pvl1xCzNilJZTVwT165-91AjPxEqIG-c2s5m5wChE0ei8JDYTt3xh9vXRymL9b6kULULCGAPShR6kELFUBbpmImHt3l1PqmH-LrdYScC7iMckylKcR4G1mw2mLI6AgNUV1_fDh6wuaOdSPlJ1CCtj3ywrh5SjeBLjvs8MabwtrPKE6hatLNs_E29Q4dUVqy99E9qqouVeZSOakrCnSFyTtgguyaSiRTp1GwdaDAVpo8enphbl0D1oXJLdwwqOoQy0fzPTZnLl0CUP8e7BFkoPDXJiLzCXiZlJ9hj-FN8gGrGXRX2oQNHCrh6SLfNoF-s10vedfyJGiuwKaDGIrDZQSY97ILFMCSGBRcjes2o8dS7QOYptdO-Ll3eqKvlciltnEbOrCuT9c0JkrNqBnCgWUWWXIdKmhPGiDeo2JkiXzMTQ5o7g6bqmP-lPXl5-n5IJ4tdpVfSVJ=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Лухано. Опис: Салат з білокачанної капусти, моркви, кореня і листя селери...",
+  },
+  {
+    id: 14,
+    name: "Салат з мідій",
+    price: 249,
+    text: "Салат складається з маринованих мідій, нарізаних огірків, оливкової олії...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczNHl-k6WhGpjLl_LjTC0E_TQr0DG1QNJ5L8yeLjfXzUYsPIUGZ6brIBjLGZyVbEJ67r0A2mVvKaYh_8W2kHYDHDg-LZjXk-_krCf9uwP4X9jIcbTCk7Fax8ThycjJGMiznN67uSMnDa1iqhxTPwaW0k2zbhH4zqE2wpCwbrIhe1dsShpaTnQr1Hn-eO4NMVbVdqu6DcWwbCjBbNwCH2jzpuyWDd-Csjhd3yRLSngBENQh-CCSU8VN8zoJP3ZgMtxz1BabTf21lUtA_aJg-fY1HeUILxHPtsv-JDLmiGvOwVZD9xzOQ3a9opsBV9FR8salxnp0y9Qipxuhqk7pAPifT7HjxEdjHCFMSMa2NWyYpG4Pm0M60yQb2dt4CH0I3Cv9zsTugkvzOpipNbe5qnrXs7btK7xQZDUQZijVYGa2G2Fk_0_YGnFsR1W7LdXQvii0xz2kAP5-6rAKmZfmlCYc7QljlSljISzqFIieq6Lx4k6xXhDN45QVUFWt3MXJpa-YFnSiRVBy2wSlNFGjjOWcK4xN_hDbap1pm6lZAbRjOh7F21aOkf7utUs_vQPujPFaxFQxiPE0xRIJjdxSkoh9VsRfz5dEhLNGntzu1BCnsgE77bECl7XwJs8AkMPagFOzywrC-eRPVZIAzuzBEfhhriO75n1pvBL1D6BQ09F6C2R33XcRo13n8SPzxe_-fxyM1JaG1KVJkQ2mfgncT-bgK4y1-QUuV7sKy5VgqvlTQt1rfkUb1Z_4x5FFaDb_nRClROKryQVNbLooxLlYuINXfxpNA333X8HHHvA4n5d0C4dHd4fqLsA39xUvTq4LeVRGFu9TSvm6_SldxML5k8oxhMo94zZFvp-e8WCkK5XWH99YoXD0WVBP_K_roLFspdpUkkCal8kw2R2JbLUZgmVeEIm8PNfXSIM_rRGRCg28Kw3MhPRhFW=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Салат з мідій. Опис: Салат складається з маринованих мідій, нарізаних огірків, оливкової олії...",
+  },
+  {
+    id: 15,
+    name: "Салат з баклажанів",
+    price: 139,
+    text: "Салат містить смажені кубики баклажанів, нарізані помідори...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczO11-TJS-997PePMV29AqFj832CVZ78auV2_9GluFZgUSIDIeVrMJQZrWKhgktAVEJemtmiE9KIPi2KJNZ-9K-XZCEJ31b1j2ORrgcLTOlQq9DRq6h5guE5s4PNlMqVVQKgOIeFuKRozbVnvNUY55wjjMA6cSZS4zX7WFMbnbU5QgjRwEhzgzmvJwV7zpzv0VozFEtgBnoXHO4Cxopgnw5pE_wzcwJaUuHVT4xs_cdKr00nOAB7ksIAmLgcEdJ84X6sRpvNFFEYi-_wlm_02yLAlNNMKdxsHHMZoIIuUHv6bYw2IdoG9Gkr1cfisjJ8zvpIzuSYqK8JrazyPUaqQibS2x9cr2_grRuFJF1WIOetTdlQU_RXwzWOLlT13J3Cp1u0oQzykRfy0YRVmEIcaogqe1cMdNtk3s7EhKMuuCYVtm_Daf3yQvIWPmGhPKPiKKmNYYtffZJJCl3ThmasVMV1OvCywiarL-DL0GtrpNTPxhBR44F4Mi6geOV7LXYbPOjqkEIVfvnXH06ElOuPvj_uG9oaw_OpPTwXqo99N41RKqQ8zLzrpyXdcFatELTG036K0-hAquTSPkTBlo229FHjnpHvd4ZfKqu0BLzKMk54aTU3fR7q9RZVe8v0diK6cG3NyyEbY_Us3Zgpt_1OpZBNM2Gt7ZebAWbo_CGlHcu2qBXA5mqauOWr9BQPb94EoVRc5Sp3PG-EOtf1C5fRHvcHm75mA6Gh3CyRKIzeFSWx8kAwRqCv00X4TXPJGCSu6f3LoY_4wyl4Tpiw3HmewYk70jxFejbxgO0x1rHPW8knsyWMy05Vx-7moNHBoFaKwNBRY5MSYsyVZvhqvVHjIoAddkVupWV9tgqzRlAvpD44R0VavHsCs0ut55zcNLuBY6V6soadbL2zJpzeW0EmBjIBHuU6E2zMOn9b4ltxA1RxWieRTZem=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Салат з баклажанів. Опис: Салат містить смажені кубики баклажанів, нарізані помідори...",
+  },
+  {
+    id: 16,
+    name: "Салат з кальмарів",
+    price: 219,
+    text: "До складу салату входять смажені кільця кальмарів, смажений кунжут...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczNKfGcqQZXtL_wXX8vAbcKudQasGz9EjwS8lOdKMlf3g2YQq0lTCNfbHmdR8Tg4ktVAlPSZPl_K_o__9A4LO4M65IF0xK1LzRjSYiYf3mY4rnp0N7R95du5WVLCfVvPKM94R8SZrnL7AjUPI6SLLR0wtQ2ob8VroFJIIl00zJ2gCY1WlHntTB4F6KWqkScEcLOFl10TwUnU-85UeRUixSvf7CaKvIQaDiGxvQSs4IQ8YrPJ83qcJDlPrIQCAAVRmEQYLGTF2ZP58B1v_Y4fjcYzMEwBBn1lkwZ_zeAH-2hkrpROgQvvJicoA_dgd4LByjPMkoIneWHuJO_s-_ItNoGZebYfgRU_jekkMtbfAPoFQQQuS8WKFDBAQe6UhFbDZT3k4lckfrezxWYfzTDcwn5qeCc0sG2LZQDMp-cwqEo45SGwIZTySrk2G68GT_7KAMLJ6O7zyyBsyblXW-dygMTSIYoQJGlpwMDb3qZgjQ2WhU__RN4CygvXZxYGOqLRFJly-dAk6V3B_275i302ZBMyHslG6raVUIVXnrZh1wCRXP1ZjmSZvQSV9oTcZ_uA4R3s4wGmnWgGYmu4IWtw9mddNfjuGIYBVEWDKmGO-kREon_h8UpFZxzDIjvSUZV0WzZaLYHIvxPonGgojjYzD-8IPKnLZZe9XImHcPmMMoTWzHlgYNTlWK2y1H8MyAGyifMHgeU86f9o0fMmh3sbmSqdapRDaJZIKsCsy8dBY_Plzwijb0Yogyt-84tmtMW7xL4WJ1lFkNZ5lLeU3xh69gsB3xD6J8DlMyjcr1jDkzQt727aausk6r_28XBpspmaaz2SunZY1CAPg1fIDIN5Uvd3D0Ku1ws_O2Plj_IP1gevMR5iKzHgwFSqFNVrfFWV5wjVM15i_y82QE65AkOZ5Ad_oONNj3ZsEVKzoVSyra1iieLa5NDM=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Салат з кальмарів. Опис: До складу салату входять смажені кільця кальмарів, смажений кунжут...",
+  },
+  {
+    id: 17,
+    name: "Салат з редису",
+    price: 109,
+    text: "Салат складається з руколи, редису, оливк  ової олії та лимонного соку...",
+    img: "https://lh3.googleusercontent.com/pw/AP1GczOJXHM4wsxi5_3QnX_hxaD3BvrZyQ9gfVChaHOwd-odScqd0P3RJtB-GaPhyJFmyHTzJR3KT6T6IoKnbtWhzMsXCTVvtTUVpn5ftVcTDEMO2fTkyznGlI1T4B7XPTYLakqfzMaXyqVzJiVWpUYDw_3JEbBVCM0QtFo0kFeUn50QwyRwL9ekE18SHzGu1qSmurJadsqB2ju6r6hU2j-b0UsZqMovTMjl_BKqEqdV5yPg5B5CqWcCPwmevHsL24jVD683MkTIOo5G-1PYJ5c-zasVRaOFjXwfn_ANoJtXDHZBXlMM1Z5IwrOX8Xo1Dki1iLdt5fJeZ7SyKKpUfAbVqZYT9SFLsRaMLS6t74iVkVVNey3rhYQuo8RtbxAMdlOgSnPZsdYh7_7gcUPhElqw6Kg2Cu-QFsEEncWoEoI1UX6l-pt2llDg5ASxgQZMZa7i7z-JVDgKt_SoGOm_IibJ1S6xRdt68rAhgB-cpyCgc78IK_kKrXKaIpPAog-VDoXar3v1RD1qsmGLJ2j7WB9K05UfRWk1f4AGk4zBvUtojz-69omz0g-zgiNoVUJ8tEbvJ4zhwUUB3hQAhbiS30p-y2xXMDK_2iKFIdEmThKhGsfgBdgWicBwjW6wYQYAoL5scnHkvOSwAzN4cHY-hnJnMuLUMN9ALatvb8pXYMMZNLY7qdz0XY6gCzw1rPG30Wimua2JJ5z1XXJP7xrCVvQi5oAE5zImFDLvLwXGzJ7TBig10sEFjO1YpSnihpDpOCMqSqlnJoRfZBG_sVxGmMdG2sbagKcVm-0jlqwyxME7NdSwDiHdDVHMnoXbZrNQig49LiFQuYi4d3lrUTNF3-qeckmYvsgkiJq-KVreD2oXulDJ_rhVlYIbTQ_KpVkWNtqXMJdB3nCxutf1HjGeV_8hhZmAAaVTGE2rAUmvdtpKufdAmEr5D0qQ=w470-h366-s-no-gm?authuser=0",
+    alt: "Фото салату. Назва: Салат з редьки. Опис: Салат складається з руколи, редьки, оливкової олії та лимонного соку...",
+  },
+];
+
+const ABOUT_BLOCK_ITEMS = [
+  {
+    id: 1,
+    name: "Здоров'я",
+    img: health,
+    text: "Наш ресторан готує виключно із натуральних продуктів, вирощених з любов'ю, які доставлять вам смакові насолоди.",
+  },
+  {
+    id: 2,
+    name: "Атмосфера",
+    img: atmosphere,
+    text: "Оформлення ресторану в традиційному грецькому стилі, м'яке освітлення та музика створюють неповторний настрій.",
+  },
+  {
+    id: 3,
+    name: "Сервіс",
+    img: service,
+    text: "Наші спеціалісти з обслуговування, зроблять ваше перебування в ресторані більш комфортним.",
+  },
+];
+
+export { MENU_ITEMS, ABOUT_BLOCK_ITEMS };

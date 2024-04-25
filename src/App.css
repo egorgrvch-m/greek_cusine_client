@@ -1,0 +1,144 @@
+/* Обнуление стилей */
+html {
+  overflow-x: hidden;
+}
+
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Отмена стилей для списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Отмена стилей для гиперссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Отмена стилей для кнопок */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+}
+
+/* Установка основного шрифта и размера текста */
+body {
+  line-height: 1;
+  font-family: sans-serif; /* Замените Arial на ваш предпочтительный шрифт */
+  font-size: 16px; /* Измените размер по вашему желанию */
+  height: 100vh;
+}
+
+/* Установка полос прокрутки */
+::-webkit-scrollbar {
+  width: 8px; /* Ширина полосы прокрутки */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Цвет фона полосы прокрутки */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Цвет полосы прокрутки */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Цвет полосы прокрутки при наведении */
+}

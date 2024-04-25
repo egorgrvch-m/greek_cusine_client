@@ -1,0 +1,27 @@
+.pages_inner {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.pag_button {
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: 5px solid aquamarine;
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 30px;
+  transition: 0.6s ease-out;
+}
+
+.pag_button:hover {
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: 5px solid black;
+  color: white;
+  background-color: black;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 30px;
+}
