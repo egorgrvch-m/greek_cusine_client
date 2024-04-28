@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cl from "./ModalType.module.css";
-import { createType } from "../../../http/itemAPI";
+import { createType } from "../../../http//itemAPI.js";
 
 const ModalType = ({ show, onHide }) => {
   const [value, setValue] = useState();
@@ -21,10 +21,9 @@ const ModalType = ({ show, onHide }) => {
     >
       <div className={cl.modal_content} onClick={(e) => e.stopPropagation()}>
         <input
-          type="text"
-          placeholder="Впищіть назву типу"
           value={value}
-          onChange={(e) => e.target.value}
+          onChange={(e) => setValue(e.target.value)}
+          placeholder={"Введите название типа"}
         />
         <button className={cl.button} onClick={addType}>
           Створити

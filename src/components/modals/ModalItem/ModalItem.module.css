@@ -66,3 +66,8 @@
 .dropdown:hover .dropbtn {
   background-color: #2980b9;
 }
+.button {
+  padding: 5px 8px;
+  background-color: #4c85a6;
+  border-radius: 10px;
+}

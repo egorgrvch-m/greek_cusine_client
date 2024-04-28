@@ -20,3 +20,9 @@
   border-radius: 12px;
   background-color: #fff;
 }
+
+.button {
+  padding: 5px 8px;
+  background-color: #4c85a6;
+  border-radius: 10px;
+}

@@ -6,11 +6,24 @@ import PaginationItem from "../components/Pagination/PaginationItem";
 
 const Pages = observer(() => {
   const { item } = useContext(Context);
-  const pages = [1, 2, 3, 4, 5];
+  const pageCount = Math.ceil(item.totalCount / item.limit);
+  const pages = [];
+
+  for (let i = 0; i < pageCount; i++) {
+    pages.push(i + 1);
+  }
+
   return (
     <div className={cl.pages_inner}>
       {pages.map((page) => (
-        <PaginationItem key={page} value={page} />
+        <PaginationItem
+          key={page}
+          active={item.page === page}
+          onClick={() => item.setPage(page)}
+          value={page}
+        >
+          {page}
+        </PaginationItem>
       ))}
     </div>
   );

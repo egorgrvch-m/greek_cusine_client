@@ -16,8 +16,18 @@ const Shop = observer(() => {
 
   useEffect(() => {
     fetchTypes().then((data) => item.setTypes(data));
-    fetchItems().then((data) => item.setItems(data.rows));
-  }, [item]);
+    fetchItems(null, 1, 2).then((data) => {
+      item.setItems(data.rows);
+      item.setTotalCount(data.count);
+    });
+  }, []);
+
+  useEffect(() => {
+    fetchItems(item.selectedType.id, item.page, 10).then((data) => {
+      item.setItems(data.rows);
+      item.setTotalCount(data.count);
+    });
+  }, [item.page, item.selectedType]);
 
   return (
     <div>

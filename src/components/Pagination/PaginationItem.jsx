@@ -1,10 +1,19 @@
 import React from "react";
 import cl from "./Pagination.module.css";
 
-const PaginationItem = ({ value }) => {
+const PaginationItem = ({ value, onClick, active }) => {
+  const handleClick = () => {
+    if (onClick) {
+      onClick(value);
+    }
+  };
+
   return (
-    <div className={cl.paginationItem}>
-      <button className={cl.pag_button}>{value}</button>
+    <div
+      className={`${cl.paginationItem} ${active ? cl.active : ""}`}
+      onClick={handleClick}
+    >
+      {value}
     </div>
   );
 };
