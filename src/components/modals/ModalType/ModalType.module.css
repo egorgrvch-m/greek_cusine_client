@@ -1,3 +1,21 @@
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(3px);
+  }
+}
+
 .modal {
   width: 100%;
   height: 100vh;
@@ -9,20 +27,113 @@
   justify-content: center;
   align-items: center;
   transform: scale(0);
+  transition: transform 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 1000;
 }
 
 .modal.active {
   transform: scale(1);
 }
-
 .modal_content {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
   border-radius: 12px;
   background-color: #fff;
+  width: 30%;
+  height: 45vh;
+}
+
+.modal_title {
+  width: 100%;
+  font-size: 28px;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+
+.modal_input {
+  font-size: 28px;
+  border: 3px solid rgb(113, 184, 171);
+  margin-top: 20px;
+  padding: 2px;
+  transition: border-color 0.3s ease;
+  width: 80%;
+}
+
+.modal_input.error {
+  border-color: red;
+  animation: shake 0.5s ease-in-out infinite alternate;
+}
+
+.error_message {
+  color: red;
+  margin-top: 5px;
+  width: 80%;
+}
+
+.modal_input:focus {
+  outline: none;
+  border-color: rgb(113, 184, 171);
 }
 
 .button {
-  padding: 5px 8px;
-  background-color: #4c85a6;
-  border-radius: 10px;
+  padding: 15px 25px;
+  background-color: rgba(180, 253, 240, 1);
+  border-radius: 25px;
+  font-size: 28px;
+  margin-top: 60px;
+  transition: 0.2s linear;
+}
+
+.button:hover {
+  box-shadow: 3px 3px 3px 0.2px rgb(96, 205, 185);
+}
+
+@media (max-width: 750px) {
+  .modal_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 40%;
+    height: 40vh;
+  }
+
+  .modal_title {
+    width: 100%;
+    font-size: 23px;
+    align-items: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.3em;
+  }
+
+  .modal_input {
+    font-size: 20px;
+    border: 3px solid rgb(113, 184, 171);
+    margin-top: 20px;
+    padding: 2px;
+    transition: border-color 0.3s ease;
+    width: 80%;
+  }
+}
+
+@media (max-width: 575px) {
+  .modal_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 70%;
+    height: 40vh;
+  }
 }

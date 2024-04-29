@@ -18,7 +18,7 @@ const HeaderNav = observer(() => {
     <nav className={cl.nav}>
       <ul className={cl.nav_list}>
         <li className={cl.nav_list__item}>
-          <a href={LOGIN_ROUTE} className={cl.list_item__link}>
+          <a href={SHOP_ROUTE} className={cl.list_item__link}>
             Головна
           </a>
         </li>
@@ -28,9 +28,7 @@ const HeaderNav = observer(() => {
           </a>
         </li>
         <li className={cl.nav_list__item}>
-          <a href={LOGIN_ROUTE} className={cl.list_item__link}>
-            Меню
-          </a>
+          <button className={cl.list_item__link}>Меню</button>
         </li>
         <li className={cl.nav_list__item}>
           <a href={LOGIN_ROUTE} className={cl.list_item__link}>

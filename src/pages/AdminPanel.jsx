@@ -9,18 +9,16 @@ const AdminPanel = () => {
   return (
     <div className={cl.admin_panel}>
       <div className={cl.container}>
-        <button
-          className={cl.admin_panel__button}
-          onClick={() => setItemVisible(true)}
-        >
-          Додати товар
-        </button>
-        <button
-          className={cl.admin_panel__buttonItem}
-          onClick={() => setTypeVisible(true)}
-        >
-          Додати тип
-        </button>
+        <ul className={cl.button_list}>
+          <li className={cl.button_item} onClick={() => setTypeVisible(true)}>
+            Додати тип
+          </li>
+          <li className={cl.button_item} onClick={() => setItemVisible(true)}>
+            Додати товар
+          </li>
+          <li className={cl.button_item}>Видалити тип</li>
+          <li className={cl.button_item}>Видалити товар</li>
+        </ul>
       </div>
       <ModalType show={typeVisible} onHide={() => setTypeVisible(false)} />
       <ModalItem show={itemVisible} onHide={() => setItemVisible(false)} />

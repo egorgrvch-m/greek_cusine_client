@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import Menu from "../components/Menu/Menu";
 import MenuNav from "../components/MenuNav/MenuNav";
 import AboutBlocks from "../components/AboutBlocks/AboutBlocks";
