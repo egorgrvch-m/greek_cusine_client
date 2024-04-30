@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import cl from "./Menu.module.css";
 import Item from "../Item/Item.jsx";
 import { observer } from "mobx-react-lite";
@@ -6,6 +6,7 @@ import { Context } from "../../index.js";
 
 const Menu = observer(({ items }) => {
   const { item } = useContext(Context);
+
   return (
     <article className={cl.menu}>
       <div className={cl.menu_inner}>

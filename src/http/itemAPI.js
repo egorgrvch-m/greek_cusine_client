@@ -31,3 +31,8 @@ export const fetchOneItem = async (id) => {
   const { data } = await $host.get("api/device/" + id);
   return data;
 };
+
+export const deleteItem = async (id) => {
+  const { data } = await $authHost.delete("api/device/" + id);
+  return data;
+};

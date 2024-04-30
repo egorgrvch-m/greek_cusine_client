@@ -33,9 +33,9 @@ export default class ItemStore {
     this._totalCount = count;
   }
 
-  // setLimit(limit) {
-  //   this._limit = limit;
-  // }
+  setLimit(limit) {
+    this._limit = limit;
+  }
 
   get types() {
     return this._types;

@@ -4,26 +4,26 @@ import { createType } from "../../../http//itemAPI.js";
 
 const ModalType = ({ show, onHide }) => {
   const [value, setValue] = useState("");
-  const [error, setError] = useState(false); // Добавляем состояние для отображения ошибки
-  const [focused, setFocused] = useState(false); // Добавляем состояние для отображения активного инпута
-  const MAX_LENGTH = 12; // Максимальное количество символов
+  const [error, setError] = useState(false);
+  const [focused, setFocused] = useState(false);
+  const MAX_LENGTH = 24;
 
   const addType = () => {
     const trimmedValue = value.trim();
     if (!trimmedValue) {
-      setError(true); // Устанавливаем ошибку, если строка пустая или содержит только пробелы
+      setError(true);
       return;
     }
     if (!isNaN(trimmedValue)) {
-      setError(true); // Устанавливаем ошибку, если введены только числа
+      setError(true);
       return;
     }
     if (trimmedValue.length > MAX_LENGTH) {
-      setError(true); // Устанавливаем ошибку, если количество символов больше максимального
+      setError(true);
       return;
     }
     if (trimmedValue !== value) {
-      setError(true); // Устанавливаем ошибку, если название начинается или заканчивается пробелом
+      setError(true);
       return;
     }
     createType({ name: value }).then((data) => {
@@ -34,16 +34,16 @@ const ModalType = ({ show, onHide }) => {
 
   const handleInputChange = (e) => {
     setValue(e.target.value);
-    setError(false); // Сбрасываем ошибку при изменении значения инпута
+    setError(false);
   };
 
   const handleInputFocus = () => {
-    setFocused(true); // Устанавливаем флаг фокуса при фокусировке на инпуте
-    setError(false); // Сбрасываем ошибку при фокусировке на инпуте
+    setFocused(true);
+    setError(false);
   };
 
   const handleInputBlur = () => {
-    setFocused(false); // Сбрасываем флаг фокуса при потере фокуса инпутом
+    setFocused(false);
   };
 
   return (
@@ -76,7 +76,7 @@ const ModalType = ({ show, onHide }) => {
               : "Введіть коректне значення!"}
           </p>
         )}{" "}
-        {/* Отображаем сообщение об ошибке */}
+        {}
         <button className={cl.button} onClick={addType}>
           Додати
         </button>

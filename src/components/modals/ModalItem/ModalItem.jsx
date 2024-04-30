@@ -1,7 +1,6 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useCallback } from "react";
 import cl from "./ModalItem.module.css";
 import { Context } from "../../..";
-import { LOGIN_ROUTE } from "../../../utils/consts.js";
 import { fetchTypes, createItem } from "../../../http/itemAPI";
 
 const ModalItem = ({ show, onHide }) => {
@@ -24,30 +23,26 @@ const ModalItem = ({ show, onHide }) => {
   const validateInputs = () => {
     let isValid = true;
     if (name.trim() === "") {
-      setNameError("Название товара не должно быть пустым");
+      setNameError("Назва товару не може бути пустою");
       isValid = false;
     } else if (name.trim().length > 22) {
-      setNameError("Название товара должно содержать не более 22 символов");
+      setNameError("Назва товару не може містити більше 22 символів");
       isValid = false;
     } else if (/^\s+|\s+$/gm.test(name)) {
-      setNameError(
-        "Название товара не должно содержать пробелы в начале и конце"
-      );
+      setNameError("Назва товару не має містити пробіл на початку та кінці");
       isValid = false;
     } else {
       setNameError("");
     }
 
     if (text.trim() === "") {
-      setTextError("Описание товара не должно быть пустым");
+      setTextError("Опис товару не може бути пустим");
       isValid = false;
     } else if (text.trim().length > 100) {
-      setTextError("Описание товара должно содержать не более 100 символов");
+      setTextError("Опис товару не може бути більше за 100 символів");
       isValid = false;
     } else if (/^\s+|\s+$/gm.test(text)) {
-      setTextError(
-        "Описание товара не должно содержать пробелы в начале и конце"
-      );
+      setTextError("Опис товару не має містити пробіл на початку та кінці");
       isValid = false;
     } else {
       setTextError("");
@@ -68,6 +63,14 @@ const ModalItem = ({ show, onHide }) => {
     createItem(formData).then((data) => onHide());
   };
 
+  const handleTypeSelection = (type) => {
+    item.setSelectedType(type);
+    console.log(item.selectedType.name);
+    forceUpdate();
+  };
+
+  const [, updateState] = useState();
+  const forceUpdate = useCallback(() => updateState({}), []);
   return (
     <div
       show={show}
@@ -77,11 +80,11 @@ const ModalItem = ({ show, onHide }) => {
     >
       <div className={cl.modal_content} onClick={(e) => e.stopPropagation()}>
         <h1 className={cl.modal_title}>
-          Заполните все поля, чтобы добавить новый товар в меню.
+          Заповніть всі поля, щоб додати товар у меню.
         </h1>
         <div className={cl.dropdown}>
           <button className={cl.dropdown_btn}>
-            {item.selectedType.name || "Выберите тип товара"}
+            {item.selectedType.name || "Оберіть тип товару"}
           </button>
           <div className={cl.dropdown_content}>
             {item.types.map((type) => (
@@ -89,7 +92,7 @@ const ModalItem = ({ show, onHide }) => {
                 className={cl.dropdown_content_btn}
                 key={type.id}
                 onClick={() => {
-                  item.setSelectedType(type);
+                  handleTypeSelection(type);
                 }}
               >
                 {type.name}
@@ -100,7 +103,7 @@ const ModalItem = ({ show, onHide }) => {
 
         <input
           type="text"
-          placeholder="Введите название товара"
+          placeholder="Впишіть назву товару"
           value={name}
           onChange={(e) => setName(e.target.value)}
           className={`${cl.modal_input} ${nameError && cl.error}`}
@@ -109,7 +112,7 @@ const ModalItem = ({ show, onHide }) => {
 
         <input
           type="number"
-          placeholder="Введите стоимость товара"
+          placeholder="Впишіть ціну товару"
           value={price}
           onChange={(e) => setPrice(Number(e.target.value))}
           className={cl.modal_input}
@@ -117,7 +120,7 @@ const ModalItem = ({ show, onHide }) => {
 
         <input
           type="text"
-          placeholder="Введите описание товара"
+          placeholder="Впишіть опис товару"
           value={text}
           onChange={(e) => setText(e.target.value)}
           className={`${cl.modal_input} ${textError && cl.error}`}
@@ -126,11 +129,11 @@ const ModalItem = ({ show, onHide }) => {
 
         <input
           type="file"
-          placeholder="Добавьте фото товара"
+          placeholder="Додайте фото товару"
           onChange={selectFile}
         />
         <button className={cl.button} onClick={addItem}>
-          Создать
+          Створити
         </button>
       </div>
     </div>

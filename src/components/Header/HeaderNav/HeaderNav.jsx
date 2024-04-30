@@ -3,8 +3,14 @@ import cl from "./HeaderNav.module.css";
 import basket from "../../../static/basket.png";
 import { Context } from "../../..";
 import { observer } from "mobx-react-lite";
-import { ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from "../../../utils/consts";
+import {
+  ADMIN_ROUTE,
+  LOGIN_ROUTE,
+  MENU_ROUTE,
+  SHOP_ROUTE,
+} from "../../../utils/consts";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HeaderNav = observer(() => {
   const { user } = useContext(Context);
@@ -28,7 +34,9 @@ const HeaderNav = observer(() => {
           </a>
         </li>
         <li className={cl.nav_list__item}>
-          <button className={cl.list_item__link}>Меню</button>
+          <Link to={SHOP_ROUTE} className={cl.list_item__link}>
+            Меню
+          </Link>
         </li>
         <li className={cl.nav_list__item}>
           <a href={LOGIN_ROUTE} className={cl.list_item__link}>
